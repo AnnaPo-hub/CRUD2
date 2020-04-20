@@ -13,10 +13,7 @@ public class FileOpenManager {
         return map.get(extension.toLowerCase());
     }
 
-
-
     public void removeConnection(String extension) {
-
         map.remove(extension.toLowerCase());
     }
 
@@ -28,14 +25,9 @@ public class FileOpenManager {
         return list;
     }
 
-
     public Set<String> getAllApps() {
         Collection<String> values = map.values();
         Set<String> appSet = new HashSet<>(values);
         return appSet;
     }
-
-
-
-
 }

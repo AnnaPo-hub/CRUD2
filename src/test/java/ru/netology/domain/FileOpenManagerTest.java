@@ -20,7 +20,6 @@ class FileOpenManagerTest {
         assertEquals("Word", fileOpenManager.checkName("txt"));
     }
 
-
     @Test
     void removeConnection() {
         fileOpenManager.register("Word", "txt");
@@ -34,8 +33,8 @@ class FileOpenManagerTest {
         fileOpenManager.register("IDEA", "class");
         List<String> actual = fileOpenManager.getAllExtensions();
         List<String> expected = new ArrayList<>();
-        expected.add ("class");
-        expected.add ("txt");
+        expected.add("class");
+        expected.add("txt");
         assertEquals(expected, actual);
     }
 
@@ -47,13 +46,11 @@ class FileOpenManagerTest {
         fileOpenManager.register("Paint", "bmp");
         fileOpenManager.register("Paint", "jpeg");
         Set<String> actual = fileOpenManager.getAllApps();
-        System.out.println(actual);
         Set<String> expected = new HashSet<>();
         expected.add("Excel");
         expected.add("Word");
         expected.add("IDEA");
         expected.add("Paint");
         assertEquals(expected, actual);
-
     }
 }
